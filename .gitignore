@@ -1,6 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
 app/**
 server/**
 venv/**
 !app/README
 !server/README
 !venv/README
+
+!server/start.py

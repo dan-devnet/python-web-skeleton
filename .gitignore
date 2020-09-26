@@ -6,6 +6,8 @@ __pycache__/
 app/**
 server/**
 venv/**
+build/config.py
+build/server_templates/**
 !app/README
 !server/README
 !venv/README

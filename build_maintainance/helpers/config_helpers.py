@@ -20,7 +20,7 @@ class CONF:
         # Convert Relative to absolute Paths
         if self.type == PATH:
             if not self.value.startswith('/'):
-                os.path.join(BASE_DIR, self.value)
+                self.value = os.path.join(BASE_DIR, self.value)
         if value != None and placeholder != None:
             self.__class__.ITEMS.append({'value':self.value, 'placeholder':self.placeholder})
 

@@ -1,0 +1,4 @@
+# /etc/nginx/nginx.config
+# /etc/nginx/sites-available/nginx_py_001.config
+# /etc/init/uwsgi.conf
+# /etc/wsgi/sites/uwsgi.ini

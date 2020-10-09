@@ -3,7 +3,7 @@ import virtualenv
 import subprocess
 
 from pathlib import Path
-from build_vars import DIR_BASE, DIR_REQUIREMENTS_TXT, DIR_VENV
+from config import DIR_BASE, FILE_REQUIREMENTS, DIR_VENV
 
 
 def setup_venv():
@@ -11,11 +11,12 @@ def setup_venv():
     virtualenv.cli_run([str(DIR_VENV)])
     print('Done!')
 
-    print('Installing all required python packages via pip from' + str(DIR_REQUIREMENTS_TXT))
-    pip_install = ("source {}/bin/activate && pip install -r " + str(DIR_REQUIREMENTS_TXT) + "/requirements.txt").format(DIR_VENV)
+    print('Installing all required python packages via pip from: ' + str(FILE_REQUIREMENTS))
+    pip_install = ("source {}/bin/activate && pip install -r " + str(FILE_REQUIREMENTS)).format(DIR_VENV)
     pip_packages = ("source {}/bin/activate && pip freeze").format(DIR_VENV)
     pip_install_log = subprocess.getoutput(pip_install)
     pip_packages_installed = subprocess.getoutput(pip_packages)
+    print('Install...' + str(pip_install_log))
     print('Installed packages:' + '\n' + pip_packages_installed)
     print('Done!')
 

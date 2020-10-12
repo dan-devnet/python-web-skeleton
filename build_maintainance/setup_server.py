@@ -11,10 +11,10 @@ from config import CONFIG_TEMPLATES, DIR_BASE, PROJECT, FILE_UWSGI_CONFIG, DIR_V
 
 def setup_server():
     create_config_files()
-    setup_nginx()
-    setup_uwsgi()
-    setup_daemon()
-    start()
+    #setup_nginx()
+    #setup_uwsgi()
+    #setup_daemon()
+    #start()
 
 def create_config_files():
     gconfig  = CONF()
